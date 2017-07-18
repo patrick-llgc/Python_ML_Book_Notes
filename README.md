@@ -5,16 +5,18 @@ Notes from the book "Python Machine Learning" by Raschka
 
 [link](https://stats.stackexchange.com/questions/18891/bagging-boosting-and-stacking-in-machine-learning)
 
-Bagging:
+-	Bagging:
+	
+	- **parallel** ensemble: each model is built independently
+	- aim to **decrease variance**, not bias
+	- suitable for high variance low bias models (complex models)
+	- an example of a tree based method is **random forest**, which develop fully grown trees (note that RF modifies the grown procedure to reduce the correlation between trees)
+	
+-	Boosting:
+	
+	- **sequential** ensemble: try to add new models that do well where previous models lack
+	- aim to **decrease bias**, not variance
+	- suitable for low variance high bias models
+	- an example of a tree based method is **gradient boosting**
 
-- **parallel** ensemble: each model is built independently
-- aim to **decrease variance**, not bias
-- suitable for high variance low bias models (complex models)
-- an example of a tree based method is **random forest**, which develop fully grown trees (note that RF modifies the grown procedure to reduce the correlation between trees)
-
-Boosting:
-
-- **sequential** ensemble: try to add new models that do well where previous models lack
-- aim to **decrease bias**, not variance
-- suitable for low variance high bias models
-- an example of a tree based method is **gradient boosting**
+- As they provide a way to reduce overfitting, bagging methods work best with strong and complex models (e.g., fully developed decision trees), in contrast with boosting methods which usually work best with weak models (e.g., shallow decision trees).
